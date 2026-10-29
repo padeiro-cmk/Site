@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosso cantinho ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 25px 16px 35px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #2b071b, #811b45, #e44c78);
+    overflow-x: hidden;
+}
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    bottom: -80px;
+    color: #ffffff35;
+    animation: subir linear infinite;
+    filter: blur(2px);
+}
+
+.heart:nth-child(1) { left: 8%; font-size: 50px; animation-duration: 15s; }
+.heart:nth-child(2) { left: 35%; font-size: 32px; animation-duration: 18s; animation-delay: 3s; }
+.heart:nth-child(3) { left: 72%; font-size: 65px; animation-duration: 20s; animation-delay: 1s; }
+.heart:nth-child(4) { left: 90%; font-size: 40px; animation-duration: 14s; animation-delay: 5s; }
+
+@keyframes subir {
+    0% { transform: translateY(0); opacity: 0; }
+    15% { opacity: 0.8; }
+    100% { transform: translateY(-120vh) rotate(35deg); opacity: 0; }
+}
+
+.container {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    animation: aparecer 0.8s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* PERFIL */
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 19px;
+    background: #ffffff12;
+    border: 1px solid #ffffff35;
+    border-radius: 23px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 12px 35px #21001030;
+    margin-bottom: 27px;
+}
+
+.avatar {
+    width: 82px;
+    height: 82px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 3px solid #ffb4d0;
+    overflow: hidden;
+    background: #ffffff18;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    min-width: 0;
+}
+
+.profile-info h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.bio {
+    font-size: 11px;
+    color: #ffdeeb;
+    line-height: 1.6;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    margin-top: 8px;
+    color: #ffe6ef;
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #8dffb0;
+    box-shadow: 0 0 8px #8dffb0;
+}
+
+/* TITULO */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 21px;
+}
+
+.section-title h2 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.section-title p {
+    font-size: 12px;
+    color: #ffdeeb;
+}
+
+/* BOTOES */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px;
+    text-decoration: none;
+    color: white;
+    background: #ffffff12;
+    border: 1px solid #ffffff2b;
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 7px 22px #24001415;
+}
+
+.menu a:active {
+    transform: scale(0.97);
+    background: #ffffff25;
+}
+
+.menu a:hover {
+    background: #ffffff20;
+    transform: translateY(-2px);
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ff9dc526;
+    border-radius: 15px;
+    font-size: 23px;
+}
+
+.menu-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.menu-text h3 {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.menu-text p {
+    font-size: 10px;
+    color: #f8cadb;
+    margin-top: 4px;
+}
+
+.arrow {
+    color: #ffc2d8;
+    font-size: 22px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 28px;
+    font-size: 11px;
+    color: #ffd7e5;
+    line-height: 1.9;
+}
+
+@media (max-width: 360px) {
+    .profile { padding: 14px; gap: 12px; }
+    .avatar { width: 68px; height: 68px; }
+    .profile-info h1 { font-size: 22px; }
+    .menu a { padding: 13px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+    <span class="heart">♥</span>
+    <span class="heart">♡</span>
+    <span class="heart">♥</span>
+    <span class="heart">♡</span>
+</div>
+
+<main class="container">
+
+    <!-- PERFIL DA NATI -->
+    <header class="profile">
+
+        <div class="avatar">
+            <!-- COLOQUE A FOTO DELA AQUI -->
+            <img src="foto-nati.jpg"
+                 alt="Foto da Nati"
+                 onerror="this.style.display='none'; this.parentElement.innerHTML='💗';">
+        </div>
+
+        <div class="profile-info">
+            <h1>Nati ♡</h1>
+
+            <p class="bio">
+                uma pessoa especial,<br>
+                em um lugar especial.
+            </p>
+
+            <div class="status">
+                <span class="dot"></span>
+                online no meu coração
+            </div>
+        </div>
+
+    </header>
+
+    <!-- MENU -->
+    <section class="section-title">
+        <h2>Feito especialmente pra você 💌</h2>
+        <p>Escolha um pedacinho do nosso cantinho ♡</p>
+    </section>
+
+    <nav class="menu">
+
+        <a href="textinho.html">
+            <div class="icon">💌</div>
+            <div class="menu-text">
+                <h3>O textinho</h3>
+                <p>Algumas palavras pra você...</p>
+            </div>
+            <span class="arrow">›</span>
+        </a>
+
+        <a href="traducao.html">
+            <div class="icon">🌷</div>
+            <div class="menu-text">
+                <h3>A tradução do textinho</h3>
+                <p>Pra entender cada palavrinha ♡</p>
+            </div>
+            <span class="arrow">›</span>
+        </a>
+
+        <a href="musica.html">
+            <div class="icon">🎧</div>
+            <div class="menu-text">
+                <h3>Uma música que me lembra você</h3>
+                <p>Dá o play e pensa em mim...</p>
+            </div>
+            <span class="arrow">›</span>
+        </a>
+
+        <a href="animal.html">
+            <div class="icon">🐻</div>
+            <div class="menu-text">
+                <h3>Com qual animal você se parece?</h3>
+                <p>Essa eu quero ver você descobrir!</p>
+            </div>
+            <span class="arrow">›</span>
+        </a>
+
+        <a href="agradecimento.html">
+            <div class="icon">♡</div>
+            <div class="menu-text">
+                <h3>...</h3>
+                <p>Um último cantinho especial.</p>
+            </div>
+            <span class="arrow">›</span>
+        </a>
+
+    </nav>
+
+    <footer class="footer">
+        feito com carinho, só pra você ❤️<br>
+        <span>um cantinho nosso, cheio de amor.</span>
+    </footer>
+
+</main>
+
+</body>
+</html>

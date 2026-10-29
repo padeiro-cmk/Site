@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O animal que me lembra você 🤍</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 20px 12px;
+            background: linear-gradient(135deg, #fce4ec, #f8bbd0, #fff0f5);
+            font-family: Georgia, "Times New Roman", serif;
+            color: #603849;
+        }
+
+        .pagina {
+            max-width: 760px;
+            margin: auto;
+            background: #fffaf7;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(105, 50, 70, 0.15);
+        }
+
+        .topo {
+            padding: 28px 22px;
+            text-align: center;
+        }
+
+        .coracao {
+            font-size: 27px;
+            color: #c96f91;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 29px;
+            line-height: 1.4;
+            color: #a64d70;
+            margin-bottom: 18px;
+        }
+
+        .imagem-principal {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            border-radius: 14px;
+            margin-bottom: 22px;
+        }
+
+        .introducao {
+            font-size: 19px;
+            line-height: 1.8;
+        }
+
+        .conteudo {
+            padding: 5px 22px 25px;
+        }
+
+        .item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 22px 0;
+            border-bottom: 1px solid #efd5df;
+        }
+
+        .item img {
+            width: 115px;
+            height: 125px;
+            object-fit: cover;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+
+        .descricao {
+            flex: 1;
+            min-width: 0;
+        }
+
+        h2 {
+            font-size: 21px;
+            color: #a64d70;
+            margin-bottom: 9px;
+        }
+
+        .descricao p {
+            font-size: 17px;
+            line-height: 1.75;
+        }
+
+        .mensagem-final {
+            text-align: center;
+            padding: 28px 22px 32px;
+            background: #fff0f5;
+        }
+
+        .mensagem-final h2 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .mensagem-final p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        .frase {
+            color: #a64d70;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .voltar {
+            display: block;
+            width: fit-content;
+            margin: 25px auto 5px;
+            padding: 13px 25px;
+            border-radius: 25px;
+            background: #c96f91;
+            color: white;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        .voltar:hover {
+            background: #b9587c;
+        }
+
+        @media (max-width: 420px) {
+            body {
+                padding: 12px 8px;
+            }
+
+            .topo {
+                padding: 23px 16px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .imagem-principal {
+                height: 230px;
+            }
+
+            .conteudo {
+                padding: 5px 14px 20px;
+            }
+
+            .item {
+                gap: 12px;
+                padding: 19px 0;
+            }
+
+            .item img {
+                width: 95px;
+                height: 110px;
+            }
+
+            h2 {
+                font-size: 19px;
+            }
+
+            .descricao p {
+                font-size: 16px;
+                line-height: 1.65;
+            }
+
+            .introducao {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 330px) {
+            .item {
+                flex-direction: column;
+            }
+
+            .item img {
+                width: 100%;
+                height: 190px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <header class="topo">
+            <div class="coracao">♡ ───── ♡ ───── ♡</div>
+
+            <h1>
+                O animal que me lembra você:
+                <br>
+                a loba 🤍
+            </h1>
+
+            <img
+                class="imagem-principal"
+                src="loba-principal.jpg"
+                alt="Uma loba branca na natureza"
+            >
+
+            <p class="introducao">
+                Escolhi a loba porque vejo nela características
+                que admiro muito em você. Ela representa força,
+                inteligência, persistência e lealdade. E são
+                justamente essas qualidades que fazem você ser
+                tão especial para mim. ♡
+            </p>
+        </header>
+
+        <section class="conteudo">
+
+            <article class="item">
+                <img
+                    src="loba-inteligente.jpg"
+                    alt="Loba observando atentamente"
+                    loading="lazy"
+                >
+
+                <div class="descricao">
+                    <h2>🧠 Inteligente</h2>
+                    <p>
+                        As lobas aprendem com experiências, observam
+                        o que acontece ao seu redor e conseguem se
+                        adaptar a diferentes situações. Isso me lembra
+                        sua inteligência, sua maneira de pensar e sua
+                        capacidade de compreender as coisas.
+                    </p>
+                </div>
+            </article>
+
+            <article class="item">
+                <img
+                    src="loba-resistente.jpg"
+                    alt="Loba caminhando na neve"
+                    loading="lazy"
+                >
+
+                <div class="descricao">
+                    <h2>💪 Resistente</h2>
+                    <p>
+                        Os lobos conseguem enfrentar ambientes
+                        desafiadores e mudanças na natureza.
+                        Para mim, isso representa sua força e a
+                        maneira como você enfrenta momentos difíceis
+                        sem deixar de ser quem é.
+                    </p>
+                </div>
+            </article>
+
+            <article class="item">
+                <img
+                    src="loba-persistente.jpg"
+                    alt="Loba caminhando pela floresta"
+                    loading="lazy"
+                >
+
+                <div class="descricao">
+                    <h2>🔥 Persistente</h2>
+                    <p>
+                        Os lobos percorrem longas distâncias e
+                        continuam procurando maneiras de alcançar
+                        seus objetivos. Isso me lembra sua
+                        determinação, sua coragem e sua vontade
+                        de continuar tentando quando algo importa
+                        de verdade para você.
+                    </p>
+                </div>
+            </article>
+
+            <article class="item">
+                <img
+                    src="loba-respeitosa.jpg"
+                    alt="Dois lobos juntos"
+                    loading="lazy"
+                >
+
+                <div class="descricao">
+                    <h2>🤍 Respeitosa</h2>
+                    <p>
+                        Os lobos se comunicam e cooperam com outros
+                        membros do grupo. Isso simboliza o respeito,
+                        a consideração e a atenção que admiro em você:
+                        sua maneira de ouvir, compreender e tratar
+                        as pessoas com carinho.
+                    </p>
+                </div>
+            </article>
+
+            <article class="item">
+                <img
+                    src="loba-leal.jpg"
+                    alt="Lobos juntos em seu ambiente natural"
+                    loading="lazy"
+                >
+
+                <div class="descricao">
+                    <h2>🐾 Leal</h2>
+                    <p>
+                        Os lobos são animais sociais que cooperam
+                        com seu grupo e mantêm vínculos importantes.
+                        Como símbolo, representam a lealdade, o
+                        companheirismo e a vontade de estar ao lado
+                        das pessoas que amam.
+                    </p>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="mensagem-final">
+
+            <div class="coracao">♡ ∞ ♡</div>
+
+            <h2>Por que você me lembra uma loba?</h2>
+
+            <p>
+                Porque vejo em você uma combinação muito bonita
+                de força, inteligência, persistência e carinho.
+                Você pode ser forte sem deixar de ser sensível,
+                determinada sem deixar de ter um coração gentil
+                e independente sem deixar de valorizar quem ama.
+            </p>
+
+            <p class="frase">
+                Se eu tivesse que escolher um animal para
+                representar você, escolheria a loba. Porque
+                ela me lembra a força, a beleza e a personalidade
+                que fazem você ser tão especial para mim. 🤍
+            </p>
+
+            <div class="coracao">♡ 🐺 ♡</div>
+
+            <a class="voltar" href="inicio.html">
+                ♡ Voltar ao menu
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

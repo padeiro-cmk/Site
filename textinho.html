@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Моей любимой ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=PT+Serif:wght@400;700&family=Poppins:wght@400;500&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 28px 14px 40px;
+    color: #4b2d2d;
+    background: linear-gradient(135deg, #2b071b, #811b45, #e44c78);
+    font-family: 'PT Serif', Georgia, serif;
+    overflow-x: hidden;
+}
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    bottom: -80px;
+    color: #ffffff35;
+    filter: blur(2px);
+    animation: floatUp linear infinite;
+}
+
+.heart:nth-child(1) { left: 7%; font-size: 42px; animation-duration: 16s; }
+.heart:nth-child(2) { left: 28%; font-size: 26px; animation-duration: 19s; animation-delay: 3s; }
+.heart:nth-child(3) { left: 67%; font-size: 55px; animation-duration: 21s; animation-delay: 1s; }
+.heart:nth-child(4) { left: 89%; font-size: 34px; animation-duration: 15s; animation-delay: 5s; }
+
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0); opacity: 0; }
+    15% { opacity: .65; }
+    100% { transform: translateY(-120vh) rotate(30deg); opacity: 0; }
+}
+
+.page-wrap {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.back {
+    display: inline-block;
+    margin: 0 0 16px 4px;
+    padding: 10px 15px;
+    border: 1px solid #ffffff55;
+    border-radius: 999px;
+    color: #fff1f6;
+    background: #ffffff15;
+    text-decoration: none;
+    font: 13px 'Poppins', sans-serif;
+    backdrop-filter: blur(10px);
+}
+
+.paper {
+    position: relative;
+    padding: clamp(25px, 6vw, 55px);
+    border: 1px solid #ead7b7;
+    border-radius: 4px 4px 12px 4px;
+    background:
+        radial-gradient(ellipse at 12% 8%, #fffdf3 0%, transparent 40%),
+        radial-gradient(ellipse at 90% 90%, #e8d4ad55 0%, transparent 42%),
+        repeating-linear-gradient(0deg, #00000004 0, #00000004 1px, transparent 1px, transparent 4px),
+        #f7efdE;
+    box-shadow: 0 18px 55px #21000f70, inset 0 0 35px #c8a97830;
+}
+
+.paper::before {
+    content: "♡";
+    position: absolute;
+    top: 12px;
+    right: 17px;
+    color: #c98a91;
+    font-size: 24px;
+    opacity: .75;
+}
+
+.paper::after {
+    content: "";
+    position: absolute;
+    inset: 9px;
+    border: 1px solid #d9bda0;
+    pointer-events: none;
+    opacity: .65;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    margin: 0 0 9px;
+    text-align: center;
+    font-family: 'Marck Script', cursive;
+    font-size: clamp(34px, 7vw, 49px);
+    font-weight: 400;
+    color: #9d3e58;
+    line-height: 1.25;
+}
+
+.ornament {
+    text-align: center;
+    color: #bd7b83;
+    letter-spacing: 7px;
+    margin: 5px 0 27px;
+    font-size: 17px;
+}
+
+p {
+    margin: 0 0 18px;
+    font-size: clamp(15px, 2.4vw, 17px);
+    line-height: 1.95;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.signature {
+    margin-top: 30px;
+    text-align: right;
+    color: #9d3e58;
+    font-family: 'Marck Script', cursive;
+    font-size: 30px;
+}
+
+.bottom-heart {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 22px;
+    color: #b84d69;
+}
+
+@media (max-width: 420px) {
+    body { padding: 18px 10px 28px; }
+    .paper { padding: 30px 22px; }
+    p { line-height: 1.85; }
+}
+</style>
+</head>
+<body>
+<div class="hearts" aria-hidden="true">
+    <span class="heart">♥</span>
+    <span class="heart">♡</span>
+    <span class="heart">♥</span>
+    <span class="heart">♡</span>
+</div>
+
+<main class="page-wrap">
+    <a class="back" href="inicio.html">← Voltar ao nosso cantinho</a>
+
+    <article class="paper">
+        <div class="content">
+            <h1>Моей любимой ❤️</h1>
+            <div class="ornament">♡ ✦ ♡</div>
+
+            <p>Моя любовь, я хочу, чтобы ты знала, насколько сильно я тебя люблю, как сильно я хочу провести с тобой всю свою жизнь, как сильно я хочу быть с тобой. Я хочу, чтобы ты знала, как внимательно я смотрю на тебя, как замечаю каждую мелочь в тебе и как искренне восхищаюсь тобой. Ты для меня абсолютно всё.</p>
+
+            <p>Я мечтаю о том дне, когда увижу, как ты входишь в двери церкви в прекрасном свадебном платье, очаровательная и сияющая, словно самая яркая звезда на моём небе. Я хочу однажды увидеть тебя такой и знать, что впереди у нас целая жизнь, которую мы проведём вместе.</p>
+
+            <p>Я понимаю, что до этого дня может пройти ещё немало времени. Возможно, иногда между нами будут возникать недопонимания, мы можем совершать ошибки или невольно уделять друг другу меньше внимания, чем хотелось бы. Но ошибки свойственны каждому человеку. Главное — не то, что мы никогда не ошибаемся, а то, что мы делаем после этого.</p>
+
+            <p>Если что-то будет не так, давай разговаривать, слушать друг друга и вместе находить решения. Давай всегда поддерживать друг друга, помогать друг другу и идти рука об руку до самого конца.</p>
+
+            <p>Как ты однажды сказала мне и чему я научился благодаря тебе, я предпочитаю исправлять свои ошибки, а не терять тебя. Я не хочу, чтобы какая-то глупость, какое-то недоразумение или незначительная ссора когда-либо отдалили нас друг от друга. Давай никогда не позволять мелочам разрушать то прекрасное, что мы строим вместе. До самого конца я буду стараться становиться лучше ради тебя и ради нас.</p>
+
+            <p>Пожалуйста, помни: когда тебе тяжело, ты всегда можешь найти утешение в моих объятиях. Но я хочу быть для тебя не только человеком, к которому ты можешь прижаться, когда тебе грустно. Я хочу быть тем, рядом с кем твоей душе спокойно, тем, кто поддерживает тебя морально, приносит тебе радость и помогает тебе чувствовать себя любимой и защищённой.</p>
+
+            <p>Я буду рядом, несмотря ни на что. Я буду рядом ради тебя и вместе с тобой, во всём, что принесёт нам жизнь. Даже если мы не сможем находиться в одном месте, моё сердце всегда будет рядом с тобой. Расстояние не изменит того, что ты значишь для меня.</p>
+
+            <p>Ты — одна из главных причин, по которым моя жизнь наполнена смыслом, и одна из самых прекрасных причин, за которые я благодарен судьбе.</p>
+
+            <p>Я люблю тебя больше всего на свете. Ты — целый мир для меня. И я никогда не устану повторять тебе это, потому что это правда. Потому что именно так я чувствую. Потому что ты действительно невероятная.</p>
+
+            <p>Ты — самая прекрасная часть моей жизни, и я хочу, чтобы ты оставалась её самой дорогой частью и в будущем. Я хочу продолжать выбирать тебя каждый день, любить тебя, заботиться о тебе и создавать с тобой воспоминания, которые мы будем хранить всю жизнь.</p>
+
+            <p>И, наконец, я хочу поблагодарить тебя за то, что ты именно такая, какая ты есть. Ты не просто прекрасна — ты по-настоящему удивительная. Ты добрая, красивая, очаровательная, в тебе есть что-то особенное, что притягивает к тебе сердца людей.</p>
+
+            <p>Твои глаза сияют так ярко, а твоя улыбка заставляет меня буквально замирать от восхищения. В тебе столько красоты, нежности и очарования, что я порой даже не могу подобрать слов, чтобы выразить всё, что чувствую.</p>
+
+            <p>Ты моя любимая, и я безмерно благодарен за то, что ты есть в моей жизни. Благодарен за возможность любить тебя, узнавать тебя всё больше и мечтать о нашем общем будущем.</p>
+
+            <p>Я хочу беречь тебя, уважать тебя, поддерживать тебя и каждый день показывать тебе, насколько сильно ты мне дорога.</p>
+
+            <p>Я люблю тебя всем сердцем. Сегодня, завтра и во все дни, которые нам ещё предстоит прожить вместе. ❤️</p>
+
+            <div class="signature">С любовью, для тебя ♡</div>
+            <div class="bottom-heart">♥ ♥ ♥</div>
+        </div>
+    </article>
+</main>
+</body>
+</html>

@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Na verdade não é só uma... 🤍</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 25px 14px;
+            font-family: Arial, sans-serif;
+            color: #603849;
+            background: linear-gradient(135deg, #fce4ec, #f8bbd0, #fce4ec);
+        }
+
+        header {
+            text-align: center;
+            margin: 10px auto 30px;
+            max-width: 700px;
+        }
+
+        h1 {
+            color: #a64d70;
+            font-family: Georgia, serif;
+            font-size: 30px;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .subtitulo {
+            color: #805466;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .lista {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .musica {
+            overflow: hidden;
+            background: #fffafc;
+            border: 1px solid #f0cfdb;
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(105, 50, 70, 0.12);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .musica:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(105, 50, 70, 0.18);
+        }
+
+        .capa {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 12px;
+            padding: 15px;
+            text-align: center;
+            background: linear-gradient(135deg, #eab4c8, #f9dce6, #dca6bc);
+            color: #8d4562;
+        }
+
+        .capa .coracao {
+            font-size: 48px;
+        }
+
+        .capa span:last-child {
+            font-family: Georgia, serif;
+            font-size: 14px;
+        }
+
+        .info {
+            padding: 14px 12px 16px;
+        }
+
+        .info h2 {
+            font-size: 16px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .ouvir {
+            display: inline-block;
+            padding: 9px 13px;
+            background: #c96f91;
+            color: white;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        .voltar {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 10px;
+            padding: 13px 24px;
+            background: #c96f91;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 24px;
+            color: #805466;
+            font-family: Georgia, serif;
+            font-size: 16px;
+        }
+
+        @media (max-width: 360px) {
+            .lista {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>na verdade não é só uma.. 🤍</h1>
+        <p class="subtitulo">
+            São várias músicas, e cada uma me faz lembrar um pouquinho de você. ♡
+        </p>
+    </header>
+
+    <main class="lista" id="lista"></main>
+
+    <footer>
+        Feitas para ouvir pensando em nós. ♡
+    </footer>
+
+    <a class="voltar" href="inicio.html">♡ Voltar ao menu</a>
+
+  
+    <p style="
+        text-align: center;
+        margin-top: 30px;
+        padding: 15px;
+        color: #a64d70;
+        font-family: Georgia, serif;
+        font-size: 27px;
+        font-weight: bold;
+    ">
+        PORQUE EU TE AMO!!🤍
+    </p>
+
+
+    <script>
+        const musicas = [
+            "Tudo o Que Você Quiser",
+            "Amar Não É Pecado",
+            "Impressionando os Anjos",
+            "Domingo de Manhã",
+            "Pra Sempre Com Você",
+            "O Que Falta em Você Sou Eu",
+            "Diz Pra Mim",
+            "Garotas Não Merecem Chorar",
+            "Saudade de Você - Zé Felipe",
+            "Quando Bate Aquela Saudade - Rubel",
+            "Propaganda - Jorge e Mateus",
+            "Incondicional",
+            "Prometo Te Amar",
+            "Chuva de Arroz",
+            "Os Anjos Cantam"
+        ];
+
+        const lista = document.getElementById("lista");
+
+        musicas.forEach((nome, indice) => {
+            const link = document.createElement("a");
+            link.className = "musica";
+            link.href =
+                "https://www.youtube.com/results?search_query=" +
+                encodeURIComponent(nome);
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+
+            link.innerHTML = `
+                <div class="capa">
+                    <span class="coracao">♡</span>
+                    <span>uma música para nós</span>
+                </div>
+
+                <div class="info">
+                    <h2>${indice + 1}. ${nome}</h2>
+                    <span class="ouvir">▶ Ouvir no YouTube</span>
+                </div>
+            `;
+
+            lista.appendChild(link);
+        });
+    </script>
+
+</body>
+</html>
